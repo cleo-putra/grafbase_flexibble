@@ -5,7 +5,7 @@ const User = g.model('User', {
   email: g.string().unique(),
   avatar: g.url(),
   description: g.string().optional(),
-  githubUrl: g.optional(),
+  githubUrl: g.url().optional(),
   linkedInUrl: g.url().optional(),
   projects: g.relation(() => Project).list().optional(),
 
